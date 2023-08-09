@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap");
+
+:root {
+  font-size: 10px;
+  --principal-color: #628aff;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+
+.container {
+  width: min(100%, 128rem);
+  margin: 0 auto;
+  padding: 1.6rem;
+}
+
+body {
+  background-color: #0a0a0a;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+nav {
+  width: 100%;
+  padding: 3.2rem 0rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+section {
+  width: 100%;
+  height: 100%;
+}
+
+section::before {
+  content: "";
+  display: block;
+  height: 0.8rem;
+  width: 100%;
+  background-color: var(--principal-color);
+}
+section .container {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 1.6rem;
+}
+
+section .details {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.6rem;
+  grid-column: 5 span;
+}
+
+section .details h1 {
+  color: var(--principal-color);
+  font-size: 6.4rem;
+  font-weight: 700;
+}
+
+section .details p {
+  color: #fff;
+  font-size: 2.2rem;
+  font-weight: 500;
+  line-height: calc(2.2rem * 1.5);
+}
+
+section .picture {
+  grid-column: 3 span;
+  height: calc(100% + 3.2rem);
+  margin-top: -1.6rem;
+}
+
+section .picture img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  filter: grayscale(100%);
+}
+
+footer {
+  width: 100%;
+  padding: 3.2rem 0rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+footer ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+footer a {
+  color: #fff;
+  font-size: 2.2rem;
+  font-weight: 500;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.noise {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  mix-blend-mode: soft-light;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.noise img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
